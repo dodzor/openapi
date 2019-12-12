@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+<?php
+require("../vendor/autoload.php");
+$openapi = \OpenApi\scan(__DIR__.'\public');
+header('Content-Type: application/x-yaml');
+echo $openapi->toYaml();
+?>
+</body>
+
+</html>
